@@ -15,7 +15,8 @@ habitos = [
 columna_indice = 2
 hoja.insert_cols(columna_indice)
 
-for fila_indice, valor in enumerate( [habito[1] for habito in habitos], start=1 ):
-    hoja.cell( row=fila_indice, column=columna_indice, value=valor )
+for fila_indice, valor in enumerate( habitos, start=1 ):
+    serie, habito = valor
+    hoja.cell( row=fila_indice, column=columna_indice, value=habito )
 
 wb.save( ruta )
