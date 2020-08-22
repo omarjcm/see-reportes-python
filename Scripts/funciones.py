@@ -9,10 +9,10 @@ def cargar_archivo( ruta_archivo ):
         return openpyxl.Workbook()
     
 def obtener_hoja(wb, titulo_hoja):
-    if wb.sheetnames[0] != 'Habitos':
+    if wb.sheetnames[0] != titulo_hoja:
         hoja = wb['Sheet']
-        hoja.title = 'Habitos'
+        hoja.title = titulo_hoja
     else:
-        hoja = wb['Habitos']
+        hoja = wb[titulo_hoja]
 
     return hoja
