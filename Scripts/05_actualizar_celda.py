@@ -11,5 +11,6 @@ hoja.cell( row=1, column=1 ).value = 'Serie Num.'
 
 celda = hoja.cell( row=1, column=1 )
 celda.value = 'Número de Serie'
+celda.font = openpyxl.styles.Font(bold=True, color='0362fc')
 
 wb.save( ruta )
