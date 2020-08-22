@@ -40,4 +40,3 @@ for indice, valor in enumerate( habitos, start=1 ):
 
 
 
-

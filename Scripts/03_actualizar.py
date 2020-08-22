@@ -12,8 +12,8 @@ habitos = [
         (3, 'Comer cosas raras una vez al mes.'),
 ]
 
-columna_indice = 2
-hoja.insert_cols(columna_indice)
+columna_indice = 5
+hoja.insert_cols( columna_indice )
 
 for fila_indice, valor in enumerate( habitos, start=1 ):
     serie, habito = valor
