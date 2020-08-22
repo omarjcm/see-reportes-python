@@ -1,5 +1,4 @@
 import openpyxl
-from funciones import *
 
 ruta = '../Data/test.xlsx'
 wb = cargar_archivo( ruta )
