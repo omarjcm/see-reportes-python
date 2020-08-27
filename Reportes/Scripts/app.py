@@ -3,6 +3,8 @@ import openpyxl
 from datetime import datetime
 from report_excel import *
 
+import pandas as pd
+
 now = datetime.now()
 '''
  %b  -> Mes
@@ -25,6 +27,18 @@ ws = wb.active
 ws.oddHeader.left.color = 'CC3366'
 
 agregar_titulo( ws )
+
+cabecera = [
+        'Country', 
+        'Year', 
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+
+agregar_filtro(ws, sheet, cabecera)
+
+
+transacciones = pd.read_excel('../Data/transacciones_202008.xlsx')
+transacciones['InvoiceDate'] = pd.to_datetime( transacciones['InvoiceDate'] )
+
 
 wb.save(nombre_archivo)
 
