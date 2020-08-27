@@ -1,2 +1,3 @@
-# -*- coding: utf-8 -*-
+import openpyxl
 
+nombre_archivo = '../Data/reporte_see'
