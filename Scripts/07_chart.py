@@ -5,6 +5,7 @@ ruta = '../Data/test.xlsx'
 wb = cargar_archivo( ruta )
 hoja = obtener_hoja(wb, 'Seguidores')
 
+# Código para añadir un Chart en Excel
 grafico = PieChart()
 
 categorias = Reference(hoja, min_col=2, min_row=2, max_row=hoja.max_row)
