@@ -18,6 +18,15 @@ wb = openpyxl.Workbook()
 sheet = wb['Sheet']
 sheet.title = 'Reporte 1'
 
-
+img = openpyxl.drawing.image.Image('../Data/image/see_webinar.png')
+sheet.add_image( img, 'A1' )
 
 wb.save(nombre_archivo)
+
+
+
+
+
+
+
+
