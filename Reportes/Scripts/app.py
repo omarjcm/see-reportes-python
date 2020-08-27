@@ -2,6 +2,8 @@ import openpyxl
 # Esto es para acceder a la fecha y hora del computador
 from datetime import datetime
 
+from report_excel import *
+
 now = datetime.now()
 '''
  %b  -> Mes
@@ -18,8 +20,7 @@ wb = openpyxl.Workbook()
 sheet = wb['Sheet']
 sheet.title = 'Reporte 1'
 
-img = openpyxl.drawing.image.Image('../Data/image/see_webinar.png')
-sheet.add_image( img, 'A1' )
+agregar_imagen( sheet )
 
 wb.save(nombre_archivo)
 
