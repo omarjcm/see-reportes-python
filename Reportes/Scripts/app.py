@@ -3,6 +3,7 @@ import openpyxl
 from datetime import datetime
 from report_excel import *
 from report_data import *
+from correo_electronico import *
 
 now = datetime.now()
 '''
@@ -37,3 +38,12 @@ agregar_filtro(ws, sheet, cabecera)
 agregar_datos(ws, sheet, cabecera)
 
 wb.save(nombre_archivo)
+
+enviar_correo( nombre_archivo )
+
+
+
+
+
+
+
