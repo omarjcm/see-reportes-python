@@ -1,6 +1,7 @@
 import pandas as pd
 
 def get_transacciones_x_pais():
+    # para conexión a base de datos, modificar esta línea
     transacciones = pd.read_excel('../Data/transacciones_202008.xlsx', sheet_name = 'Sheet1')
     transacciones['InvoiceDate'] = pd.to_datetime( transacciones['InvoiceDate'] )    
     transacciones['anio'] = transacciones.InvoiceDate.dt.year
