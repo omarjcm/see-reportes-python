@@ -15,7 +15,3 @@ def get_transacciones_x_pais():
     ).reset_index(name='venta_usd')
     
     return (paises, transacciones_x_pais)
-
-paises, transacciones = get_transacciones_x_pais()
-
-print( transacciones )

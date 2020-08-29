@@ -36,6 +36,4 @@ def agregar_filtro(ws, sheet, cabecera):
             indice += 1
     # Para activar los filtros dentro del archivo en excel        
     ws.auto_filter.ref = 'A7:N7'
-
     
-
