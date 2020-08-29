@@ -39,7 +39,10 @@ agregar_datos(ws, sheet, cabecera)
 
 wb.save(nombre_archivo)
 
-enviar_correo( nombre_archivo )
+destinatarios = ['gpizarro@ups.edu.ec', 'omarjcm@gmail.com', 'gpizarro@ieee.org']
+
+for destinatario in destinatarios:
+    enviar_correo( nombre_archivo, destinatario )
 
 
 

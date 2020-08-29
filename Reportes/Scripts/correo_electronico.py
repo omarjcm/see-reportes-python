@@ -5,11 +5,12 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-def enviar_correo( reporte ):
+def enviar_correo( reporte, destinatario ):
     subject = "SEE - Reporte de Países"
     sender_email = "guillermo.pizarro.v@gmail.com"
-    receiver_email = "gpizarro@ieee.org, omarjcm@gmail.com, gpizarro@ups.edu.ec"
-    password = input("Type your password and press enter:")
+    receiver_email = destinatario
+    # Aquí deben colocar su clave del correo electrónico
+    password = input("Ingrese su clave del correo: ")
     
     # Create a multipart message and set headers
     message = MIMEMultipart()
